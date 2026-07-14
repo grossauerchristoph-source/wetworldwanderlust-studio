@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
 
-const title = "WetWorldWanderlust — Human strategy. Digital experiences.";
-const description = "An independent digital studio by Tanja & Christoph. We build websites, digital products and human content with strategy, design and modern technology.";
+const title = "WetWorldWanderlust — Tanja & Christoph, one shared studio.";
+const description = "Meet Tanja & Christoph: two people combining human strategy, creativity and modern execution to build digital experiences people trust.";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
@@ -16,8 +16,8 @@ export async function generateMetadata(): Promise<Metadata> {
     title,
     description,
     icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
-    openGraph: { title, description, type: "website", images: [{ url: "/og.png", width: 1200, height: 630, alt: "WetWorldWanderlust — Digital experiences made human." }] },
-    twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
+    openGraph: { title, description, type: "website", images: [{ url: "/og-v2.png", width: 1200, height: 630, alt: "WetWorldWanderlust — Two people. One shared studio." }] },
+    twitter: { card: "summary_large_image", title, description, images: ["/og-v2.png"] },
   };
 }
 
