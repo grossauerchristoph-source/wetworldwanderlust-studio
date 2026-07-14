@@ -15,7 +15,7 @@ export default function Home() {
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="WetWorldWanderlust – Startseite"><span>WetWorld</span><span>Wanderlust</span></a>
         <nav className="desktop-nav" aria-label="Hauptnavigation"><a href="#story">Our story</a><a href="#together">Why two</a><a href="#work">Work</a></nav>
-        <a className="header-cta" href="mailto:hello@wetworldwanderlust.com?subject=Tell%20us%20about%20your%20project">Tell us about your project <Arrow /></a>
+        <a className="header-cta" href="mailto:hello@wetworldwanderlust.com?subject=Let%27s%20start%20a%20conversation">Start a conversation <Arrow /></a>
         <details className="mobile-menu"><summary aria-label="Menü öffnen"><span /><span /></summary><nav aria-label="Mobile Navigation"><a href="#story">Our story</a><a href="#together">Why two</a><a href="#work">Work</a><a href="mailto:hello@wetworldwanderlust.com?subject=Tell%20us%20about%20your%20project">Tell us about your project <Arrow /></a></nav></details>
       </header>
 
@@ -23,8 +23,9 @@ export default function Home() {
         <div className="hero-copy reveal-text">
           <p className="eyebrow"><i /> Tanja & Christoph · WetWorldWanderlust</p>
           <h1>Two people.<br />One shared<br /><em>studio.</em></h1>
-          <p className="hero-intro">We are a married couple from Austria, now living in Southeast Asia. Together, we combine human strategy with modern execution to create digital experiences people can trust.</p>
-          <div className="hero-actions"><a className="primary-link" href="mailto:hello@wetworldwanderlust.com?subject=Tell%20us%20about%20your%20project">Tell us what you are building <Arrow /></a><a className="text-link" href="#story">Get to know us <Arrow /></a></div>
+          <p className="hero-positioning">We help businesses earn trust through thoughtful digital experiences.</p>
+          <p className="hero-intro">We are a married couple from Austria, now living in Southeast Asia. Human strategy and modern execution come together in every decision we make.</p>
+          <div className="hero-actions"><a className="text-link" href="#story">Get to know us <Arrow /></a><a className="primary-link" href="mailto:hello@wetworldwanderlust.com?subject=Let%27s%20start%20a%20conversation">Start a conversation <Arrow /></a></div>
         </div>
         <PhotoPlaceholder className="hero-photo image-reveal" label="Tanja & Christoph, together" note="Hero replacement · candid shared moment · natural light · Southeast Asia · portrait 4:5" />
         <div className="hero-aside"><p>Human strategy</p><p>Modern execution</p><span>One conversation, two perspectives, every decision made together.</span></div>
@@ -57,7 +58,7 @@ export default function Home() {
             <div className="person-copy"><div><p className="kicker">Tanja sees</p><h3>The person<br />inside the system.</h3></div><ul><li>Creativity</li><li>Emotion</li><li>Aesthetics</li><li>Humanity</li></ul><p>She asks the questions that create connection: How does this feel? What will people remember? Where does the brand become human?</p></div>
           </article>
         </div>
-        <div className="both-statement reveal-text"><span aria-hidden="true">+</span><small>Two perspectives · one shared standard</small><p>Structure without feeling stays distant.<br />Feeling without structure loses direction.</p><h2>Every project<br /><em>needs both.</em></h2></div>
+        <div className="both-statement reveal-text"><small>Two perspectives · one shared standard</small><p>Structure without feeling stays distant.<br />Feeling without structure loses direction.</p><h2>Every project<br /><em>needs both.</em></h2></div>
       </section>
 
       <section className="technology section dark">
@@ -96,7 +97,7 @@ export default function Home() {
       <section className="cta-section">
         <div className="cta-kicker"><p className="eyebrow"><i /> Maybe we are the right two people.</p><span>One thoughtful project at a time.</span></div>
         <h2>Tell us what you&apos;re<br />trying to <em>change.</em></h2>
-        <div className="cta-bottom"><p className="cta-copy">No polished brief needed. Start with the challenge, the ambition or the idea you cannot stop thinking about.</p><a className="primary-cta" href="mailto:hello@wetworldwanderlust.com?subject=Let%27s%20build%20something%20together"><span>Start a conversation</span><Arrow /></a></div>
+        <div className="cta-bottom"><p className="cta-copy">No polished brief needed. Start with the challenge, the ambition or the idea you cannot stop thinking about.</p><div className="cta-action"><a className="primary-cta" href="mailto:hello@wetworldwanderlust.com?subject=Let%27s%20build%20something%20together"><span>Start a conversation</span><Arrow /></a><p className="cta-note">We don&apos;t need a perfect brief. We need an honest conversation.</p></div></div>
       </section>
 
       <footer><div className="footer-top"><a className="wordmark" href="#top"><span>WetWorld</span><span>Wanderlust</span></a><p>Tanja & Christoph<br />Austria · Southeast Asia</p><p>Human strategy.<br />Modern execution.</p></div><div className="footer-bottom"><span>© 2026 WetWorldWanderlust</span><div><a href="mailto:hello@wetworldwanderlust.com">Email</a><a href="#top">Back to top ↑</a></div></div></footer>

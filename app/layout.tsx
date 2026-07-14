@@ -16,8 +16,8 @@ export async function generateMetadata(): Promise<Metadata> {
     title,
     description,
     icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
-    openGraph: { title, description, type: "website", images: [{ url: "/og-v3.png", width: 1200, height: 630, alt: "WetWorldWanderlust — Two people. One shared studio. Human strategy. Modern execution." }] },
-    twitter: { card: "summary_large_image", title, description, images: ["/og-v3.png"] },
+    openGraph: { title, description, type: "website", images: [{ url: "/og-v4.png", width: 1200, height: 630, alt: "WetWorldWanderlust — Two people. One shared studio. Thoughtful digital experiences that earn trust." }] },
+    twitter: { card: "summary_large_image", title, description, images: ["/og-v4.png"] },
   };
 }
 
