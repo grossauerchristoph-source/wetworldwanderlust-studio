@@ -23,11 +23,11 @@ export default function Home() {
         <div className="hero-copy reveal-text">
           <p className="eyebrow"><i /> Tanja & Christoph · WetWorldWanderlust</p>
           <h1>Two people.<br />One shared<br /><em>studio.</em></h1>
-          <p className="hero-intro">We combine human strategy with modern execution to create digital experiences people can trust.</p>
-          <a className="text-link" href="#story">Get to know us <Arrow /></a>
+          <p className="hero-intro">We are a married couple from Austria, now living in Southeast Asia. Together, we combine human strategy with modern execution to create digital experiences people can trust.</p>
+          <div className="hero-actions"><a className="primary-link" href="mailto:hello@wetworldwanderlust.com?subject=Tell%20us%20about%20your%20project">Tell us what you are building <Arrow /></a><a className="text-link" href="#story">Get to know us <Arrow /></a></div>
         </div>
-        <PhotoPlaceholder className="hero-photo image-reveal" label="Tanja & Christoph, together" note="Natural moment · Southeast Asia · landscape 4:5" />
-        <p className="hero-aside">Not a handoff between strategist and designer. One conversation, two perspectives, every decision made together.</p>
+        <PhotoPlaceholder className="hero-photo image-reveal" label="Tanja & Christoph, together" note="Hero replacement · candid shared moment · natural light · Southeast Asia · portrait 4:5" />
+        <div className="hero-aside"><p>Human strategy</p><p>Modern execution</p><span>One conversation, two perspectives, every decision made together.</span></div>
       </section>
 
       <section className="story section" id="story">
@@ -57,7 +57,7 @@ export default function Home() {
             <div className="person-copy"><div><p className="kicker">Tanja sees</p><h3>The person<br />inside the system.</h3></div><ul><li>Creativity</li><li>Emotion</li><li>Aesthetics</li><li>Humanity</li></ul><p>She asks the questions that create connection: How does this feel? What will people remember? Where does the brand become human?</p></div>
           </article>
         </div>
-        <div className="both-statement reveal-text"><span aria-hidden="true">+</span><p>Structure without feeling stays distant.<br />Feeling without structure loses direction.</p><h2>Every project<br /><em>needs both.</em></h2></div>
+        <div className="both-statement reveal-text"><span aria-hidden="true">+</span><small>Two perspectives · one shared standard</small><p>Structure without feeling stays distant.<br />Feeling without structure loses direction.</p><h2>Every project<br /><em>needs both.</em></h2></div>
       </section>
 
       <section className="technology section dark">
@@ -67,19 +67,19 @@ export default function Home() {
       </section>
 
       <section className="work section" id="work">
-        <div className="section-label"><span>04</span><span>Selected work</span></div>
-        <div className="work-heading reveal-text"><h2>Built around<br />a real reason.</h2><p>The format changes. Our standard does not: understand the human problem first, then design the right digital answer.</p></div>
+        <div className="section-label"><span>04</span><span>Selected Projects</span></div>
+        <div className="work-heading reveal-text"><h2>Three projects.<br />Three human<br />problems.</h2><p>Websites and UGC begin in different formats, but they earn trust the same way: by understanding what people need to feel before they act.</p></div>
         <div className="project-grid">
-          <article className="project project-wide"><PhotoPlaceholder className="project-photo image-reveal" label="Selected project 01" note="Replace with real project imagery · landscape" /><div><span>Brand strategy · Website</span><h3>Turning expertise into something people can feel — and trust.</h3><p>Clarity before decoration. A digital presence built around the conversations the business needed to start.</p><a href="mailto:hello@wetworldwanderlust.com?subject=Case%20study%20request">Ask us about this project <Arrow /></a></div></article>
-          <article className="project"><PhotoPlaceholder className="project-photo image-reveal" label="Selected project 02" note="Replace with real project imagery · portrait" /><div><span>UX strategy · Digital product</span><h3>Making a complex product feel clear from the first interaction.</h3><a href="mailto:hello@wetworldwanderlust.com?subject=Case%20study%20request">Ask us about this project <Arrow /></a></div></article>
-          <article className="project"><PhotoPlaceholder className="project-photo warm image-reveal" label="Selected project 03" note="Replace with authentic UGC frame · portrait" /><div><span>UGC strategy · Content</span><h3>Creating the kind of content people choose to believe.</h3><a href="mailto:hello@wetworldwanderlust.com?subject=Case%20study%20request">Ask us about this project <Arrow /></a></div></article>
+          <article className="project"><PhotoPlaceholder className="project-photo motionlab image-reveal" label="MotionLab Physiotherapie" note="Project replacement · treatment in motion · real practice environment · landscape" /><div className="project-content"><span>Strategy · UX/UI · Website</span><h3>MotionLab<br />Physiotherapie</h3><dl><div><dt>Challenge</dt><dd>Make professional expertise feel clear and human before the first appointment.</dd></div><div><dt>Solution</dt><dd>A movement-led identity and focused journey built around patient questions, not practice jargon.</dd></div><div><dt>Result</dt><dd>A calmer first impression, faster orientation and more confidence in taking the next step.</dd></div></dl><a href="mailto:hello@wetworldwanderlust.com?subject=MotionLab%20case%20study">Explore the thinking <Arrow /></a></div></article>
+          <article className="project"><PhotoPlaceholder className="project-photo wilfried image-reveal" label="Wilfried & Söhne Steuerberatung" note="Project replacement · authentic office detail · heritage and modernity · landscape" /><div className="project-content"><span>Positioning · Website · Development</span><h3>Wilfried & Söhne<br />Steuerberatung</h3><dl><div><dt>Challenge</dt><dd>Show a trusted family practice as contemporary without losing its history or credibility.</dd></div><div><dt>Solution</dt><dd>An editorial digital presence balancing personal continuity with precise, modern clarity.</dd></div><div><dt>Result</dt><dd>More character, easier navigation and a brand that feels established rather than old-fashioned.</dd></div></dl><a href="mailto:hello@wetworldwanderlust.com?subject=Wilfried%20%26%20S%C3%B6hne%20case%20study">Explore the thinking <Arrow /></a></div></article>
+          <article className="project ugc-project"><PhotoPlaceholder className="project-photo ugc-visual image-reveal" label="UGC Showcase" note="Showcase replacement · authentic vertical video stills · natural product use · 9:16 source" /><div className="project-content"><span>Concept · Production · Campaign content</span><h3>UGC<br />Showcase</h3><dl><div><dt>Challenge</dt><dd>Create short-form content that earns attention without feeling like another polished advertisement.</dd></div><div><dt>Solution</dt><dd>Human concepts, natural delivery and platform-native storytelling shaped around real product moments.</dd></div><div><dt>Result</dt><dd>Credible content that feels like a recommendation and can work across an entire campaign.</dd></div></dl><a href="mailto:hello@wetworldwanderlust.com?subject=UGC%20showcase">View the showcase with us <Arrow /></a></div></article>
         </div>
       </section>
 
       <section className="offer section">
-        <div className="section-label"><span>05</span><span>What we create</span></div>
-        <div className="offer-intro reveal-text"><h2>Different outcomes.<br />The same two people.</h2><p>You never disappear into a team or get passed from strategy to execution. Whatever we create, you work directly with both of us.</p></div>
-        <div className="offer-grid"><article><span>01</span><p className="kicker">Digital products</p><h3>Websites, landing pages and funnels</h3><p>For businesses that need their digital presence to explain their value, earn confidence and make the next step feel natural.</p></article><article><span>02</span><p className="kicker">UGC creation</p><h3>Product videos, social content and campaigns</h3><p>For brands that need content to feel like a human recommendation — not another advertisement asking for attention.</p></article></div>
+        <div className="section-label"><span>05</span><span>Two core disciplines</span></div>
+        <div className="offer-intro reveal-text"><h2>Trust is built<br />in the experience<br /><em>and the story.</em></h2><p>Digital products and UGC are equal parts of our studio. One shapes the place people arrive. The other shapes the moments that bring them there.</p></div>
+        <div className="offer-grid"><article><span>01 / Digital experiences</span><p className="kicker">Strategy · Design · Development</p><h3>Websites, landing pages and funnels</h3><p>We turn complex value into a clear, credible experience — designed around the questions people ask before they trust a business.</p><a href="mailto:hello@wetworldwanderlust.com?subject=Digital%20product%20project">Build the experience <Arrow /></a></article><article><span>02 / Human content</span><p className="kicker">Concept · Production · Campaign</p><h3>UGC, product videos and social content</h3><p>We create natural, platform-aware stories that help brands sound like people and products feel part of real life.</p><a href="mailto:hello@wetworldwanderlust.com?subject=UGC%20project">Tell the human story <Arrow /></a></article></div>
       </section>
 
       <section className="process section dark">
@@ -94,10 +94,9 @@ export default function Home() {
       </section>
 
       <section className="cta-section">
-        <p className="eyebrow"><i /> Maybe we are the right two people.</p>
+        <div className="cta-kicker"><p className="eyebrow"><i /> Maybe we are the right two people.</p><span>One thoughtful project at a time.</span></div>
         <h2>Tell us what you&apos;re<br />trying to <em>change.</em></h2>
-        <p className="cta-copy">No polished brief needed. Start with the challenge, the ambition or the idea you cannot stop thinking about.</p>
-        <a className="primary-cta" href="mailto:hello@wetworldwanderlust.com?subject=Let%27s%20build%20something%20together"><span>Start a conversation</span><Arrow /></a>
+        <div className="cta-bottom"><p className="cta-copy">No polished brief needed. Start with the challenge, the ambition or the idea you cannot stop thinking about.</p><a className="primary-cta" href="mailto:hello@wetworldwanderlust.com?subject=Let%27s%20build%20something%20together"><span>Start a conversation</span><Arrow /></a></div>
       </section>
 
       <footer><div className="footer-top"><a className="wordmark" href="#top"><span>WetWorld</span><span>Wanderlust</span></a><p>Tanja & Christoph<br />Austria · Southeast Asia</p><p>Human strategy.<br />Modern execution.</p></div><div className="footer-bottom"><span>© 2026 WetWorldWanderlust</span><div><a href="mailto:hello@wetworldwanderlust.com">Email</a><a href="#top">Back to top ↑</a></div></div></footer>
