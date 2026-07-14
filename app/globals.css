@@ -119,6 +119,9 @@ h2 em { font-weight:400; color:#716f66; }
 .project:nth-child(3) { animation-range:entry 12% cover 32%; }
 @keyframes project-in { from { opacity:.08; transform:translateY(22px); } to { opacity:1; transform:none; } }
 .project-photo { min-height:500px; }
+.project-preview picture,.project-preview img { position:absolute; inset:0; width:100%; height:100%; display:block; }
+.project-preview img { object-fit:cover; object-position:center top; transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .7s ease; }
+.project:hover .project-preview img,.project:focus-within .project-preview img { transform:scale(1.025); filter:contrast(1.03); }
 .motionlab .photo-tone { background:radial-gradient(circle at 60% 27%,#d6d2c5,transparent 24%),linear-gradient(130deg,#737d75,#b5b7ad 58%,#686e68); }
 .wilfried .photo-tone { background:radial-gradient(circle at 35% 30%,#d8cbbb,transparent 24%),linear-gradient(140deg,#716a62,#b5a493 60%,#665f57); }
 .ugc-visual .photo-tone { background:radial-gradient(circle at 62% 25%,#dfc5a7,transparent 25%),linear-gradient(135deg,#886e58,#caa582 58%,#756659); }
