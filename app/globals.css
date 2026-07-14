@@ -140,14 +140,14 @@ h2 em { font-weight:400; color:#716f66; }
 .offer-intro { margin:100px 0 120px 25%; display:grid; grid-template-columns:1.1fr .55fr; gap:9vw; align-items:end; }
 .offer-intro h2 { margin:0; }
 .offer-intro p { font:400 19px/1.55 var(--serif); }
-.offer-grid { margin-left:25%; display:grid; grid-template-columns:1fr 1fr; border-top:1px solid var(--line); }
+.offer-grid { --offer-space-kicker:65px; --offer-space-heading:24px; --offer-space-copy:28px; --offer-space-cta:45px; margin-left:25%; display:grid; grid-template-columns:1fr 1fr; align-items:stretch; border-top:1px solid var(--line); }
 .offer-grid article { padding:25px 5vw 80px 0; border-right:1px solid var(--line); }
 .offer-grid article+article { padding-left:5vw; border-right:0; }
 .offer-grid article>span { font-size:10px; }
-.offer-grid .kicker { margin-top:65px; }
-.offer-grid h3 { font:400 clamp(32px,3.5vw,54px)/1.05 var(--serif); letter-spacing:-.04em; }
-.offer-grid article>p:not(.kicker) { max-width:430px; color:#53534e; line-height:1.6; }
-.offer-grid a { margin-top:45px; padding:16px 0; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); display:flex; justify-content:space-between; font-size:10px; text-transform:uppercase; letter-spacing:.14em; transition:padding .25s ease; }
+.offer-grid .kicker { margin:var(--offer-space-kicker) 0 0; }
+.offer-grid h3 { min-height:3.15em; margin:var(--offer-space-heading) 0 0; display:flex; align-items:flex-end; font:400 clamp(32px,3.5vw,54px)/1.05 var(--serif); letter-spacing:-.04em; }
+.offer-grid article>p:not(.kicker) { max-width:430px; margin:var(--offer-space-copy) 0 0; color:#53534e; line-height:1.6; }
+.offer-grid a { margin-top:var(--offer-space-cta); padding:16px 0; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); display:flex; justify-content:space-between; font-size:10px; text-transform:uppercase; letter-spacing:.14em; transition:padding .25s ease; }
 .offer-grid a:hover { padding-left:10px; padding-right:10px; }
 .process { min-height:900px; }
 .process-heading { margin:100px 0 120px 25%; display:grid; grid-template-columns:1.2fr .5fr; gap:9vw; align-items:end; }
