@@ -69,6 +69,10 @@ h2 em { font-weight:400; color:#716f66; }
 .hero-actions .text-link { margin-left:0; }
 .hero-photo { min-height:calc(100svh - 225px); }
 .hero-photo .photo-tone { background:radial-gradient(circle at 42% 27%,#d9d0c3,transparent 25%),linear-gradient(122deg,#77766e 0 42%,#b4a99b 42% 64%,#696c67 64%); }
+.hero-video { aspect-ratio:4/5; }
+.hero-video video,.hero-video-fallback { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.hero-video video { z-index:1; }
+.hero-video-fallback { z-index:0; }
 .hero-aside { grid-column:2; width:70%; justify-self:end; margin:18px 0 0; display:grid; grid-template-columns:1fr 1fr; gap:0 20px; font-size:10px; line-height:1.5; text-transform:uppercase; letter-spacing:.12em; }
 .hero-aside p { margin:0; padding-top:8px; border-top:1px solid var(--line); }
 .hero-aside span { grid-column:1/-1; margin-top:15px; color:#6c6961; }

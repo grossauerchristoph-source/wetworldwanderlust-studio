@@ -1,4 +1,5 @@
 import { ProjectModalTrigger, UgcVideo, WebsitePreview } from "./ProjectMedia";
+import { HeroVideo } from "./HeroVideo";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
@@ -30,7 +31,7 @@ export default function Home() {
           <p className="hero-intro">We are a married couple from Austria, now living in Southeast Asia. Human strategy and modern execution come together in every decision we make.</p>
           <div className="hero-actions"><a className="text-link" href="#story">Get to know us <Arrow /></a><a className="primary-link" href="mailto:hello@wetworldwanderlust.com?subject=Let%27s%20build%20something%20together">Let&apos;s build something together <Arrow /></a></div>
         </div>
-        <PhotoPlaceholder className="hero-photo image-reveal" label="Tanja & Christoph, together" note="Hero replacement · candid shared moment · natural light · Southeast Asia · portrait 4:5" />
+        <HeroVideo />
         <div className="hero-aside"><p>Human strategy</p><p>Modern execution</p><span>One conversation, two perspectives, every decision made together.</span></div>
       </section>
 
