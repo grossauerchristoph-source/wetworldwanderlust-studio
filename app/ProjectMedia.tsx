@@ -31,9 +31,9 @@ export function WebsitePreview({ src, alt, label }: WebsitePreviewProps) {
   );
 }
 
-type UgcVideoProps = { src: string; poster: string; captionsSrc?: string };
+type UgcVideoProps = { src: string; poster: string; captionsSrc?: string; id?: string };
 
-export function UgcVideo({ src, poster, captionsSrc }: UgcVideoProps) {
+export function UgcVideo({ src, poster, captionsSrc, id = "ugc-showcase-video" }: UgcVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
   const [muted, setMuted] = useState(true);
@@ -89,6 +89,7 @@ export function UgcVideo({ src, poster, captionsSrc }: UgcVideoProps) {
       onMouseLeave={resetPreview}
     >
       <video
+        id={id}
         ref={videoRef}
         src={src}
         poster={poster}
@@ -113,4 +114,16 @@ export function UgcVideo({ src, poster, captionsSrc }: UgcVideoProps) {
       </div>
     </div>
   );
+}
+
+export function VideoPlayCta({ videoId = "ugc-showcase-video" }: { videoId?: string }) {
+  const playVideo = async () => {
+    const video = document.getElementById(videoId) as HTMLVideoElement | null;
+    if (!video) return;
+    video.muted = true;
+    video.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
+    try { await video.play(); } catch { video.focus(); }
+  };
+
+  return <button type="button" className="project-cta" onClick={playVideo} aria-controls={videoId}>Watch the video <span aria-hidden="true">↗</span></button>;
 }
