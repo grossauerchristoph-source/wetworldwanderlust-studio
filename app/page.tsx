@@ -45,7 +45,7 @@ export default function Home() {
         <div className="section-label"><span>01</span><span>Our story</span></div>
         <div className="story-lead reveal-text"><p className="kicker">It started with how differently we see things.</p><h2>We are an Austrian couple building a life — and a studio — between worlds.</h2></div>
         <div className="story-grid">
-          <PhotoPlaceholder className="story-photo image-reveal" label="A quiet working moment" note="Candid, unposed · home or café · landscape 3:2" />
+          <FounderPortrait className="story-photo image-reveal" src="/founders/founders-collaboration.jpg" alt="Tanja and Christoph collaborating at their laptop" />
           <div className="story-copy">
             <p>We did not set out to become a traditional agency. We started working together because we kept making each other&apos;s work better.</p>
             <p>Christoph would find the structure inside an idea. Tanja would notice what it needed to feel alive. One would ask whether it works. The other whether it feels right. Soon, those were no longer separate questions.</p>
