@@ -1,25 +1,27 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import "./globals.css";
+import { productionSiteUrl } from "./site-config";
 
-const title = "WetWorldWanderlust — Tanja & Christoph, one shared studio.";
-const description = "Meet Tanja & Christoph: two people combining human strategy, creativity and modern execution to build digital experiences people trust.";
+const title = "WetWorldWanderlust Studios | Websites, Funnels & Brand Storytelling";
+const description = "We create strategic websites, landing pages, funnels and human brand stories for businesses that value clarity, thoughtful design and modern execution.";
+const socialImageUrl = `${productionSiteUrl}/social/og-image.jpg`;
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
-  const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.includes("localhost") ? "http" : "https");
-  const metadataBase = new URL(`${protocol}://${host}`);
-
-  return {
-    metadataBase,
+export const metadata: Metadata = {
+  metadataBase: new URL(productionSiteUrl),
+  title,
+  description,
+  alternates: { canonical: productionSiteUrl },
+  robots: { index: true, follow: true },
+  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  openGraph: {
+    type: "website",
     title,
     description,
-    icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
-    openGraph: { title, description, type: "website", images: [{ url: "/og-v6.png", width: 1200, height: 630, alt: "WetWorldWanderlust — Two people. One shared studio. Human judgment. Modern execution." }] },
-    twitter: { card: "summary_large_image", title, description, images: ["/og-v6.png"] },
-  };
-}
+    url: productionSiteUrl,
+    images: [{ url: socialImageUrl, width: 1200, height: 630, alt: "Tanja and Christoph of WetWorldWanderlust Studios collaborating" }],
+  },
+  twitter: { card: "summary_large_image", title, description, images: [socialImageUrl] },
+};
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en"><body>{children}</body></html>;

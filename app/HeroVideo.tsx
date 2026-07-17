@@ -9,7 +9,7 @@ export function HeroVideo() {
     <figure className="photo hero-photo hero-video image-reveal">
       <img
         className="hero-video-fallback"
-        src="/hero/hero-fallback.jpg"
+        src="/hero/hero-fallback.webp"
         alt="Tanja and Christoph working together"
       />
       {!hasError && (
@@ -19,7 +19,7 @@ export function HeroVideo() {
           loop
           playsInline
           preload="auto"
-          poster="/hero/hero-fallback.jpg"
+          poster="/hero/hero-fallback.webp"
           aria-label="Tanja and Christoph, together"
           onError={() => setHasError(true)}
         >

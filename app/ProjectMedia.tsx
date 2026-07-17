@@ -194,14 +194,13 @@ function ModalVideo({ src, poster }: { src: string; poster: string }) {
 
 export function ProjectModalTrigger(props: ProjectModalProps) {
   const [open, setOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
   const titleId = useId();
 
-  useEffect(() => setMounted(true), []);
   useEffect(() => {
     if (!open) return;
+    const trigger = triggerRef.current;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const modal = modalRef.current;
@@ -221,11 +220,11 @@ export function ProjectModalTrigger(props: ProjectModalProps) {
     return () => {
       document.body.style.overflow = previousOverflow;
       document.removeEventListener("keydown", onKeyDown);
-      triggerRef.current?.focus();
+      trigger?.focus();
     };
   }, [open]);
 
   const modal = open ? <div className="project-modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setOpen(false); }}><div ref={modalRef} className={`project-modal project-modal-${props.kind}`} role="dialog" aria-modal="true" aria-labelledby={titleId}><button type="button" className="project-modal-close" onClick={() => setOpen(false)} aria-label={`Close ${props.title} project`}>Close ×</button><div className="project-modal-grid"><div className="project-modal-media">{props.kind === "website" && props.imageSrc && props.imageAlt ? <ModalWebsitePreview src={props.imageSrc} alt={props.imageAlt} /> : props.videoSrc && props.poster ? <ModalVideo src={props.videoSrc} poster={props.poster} /> : null}</div><div className="project-modal-copy"><p className="kicker">Selected Work</p><h2 id={titleId}>{props.title}</h2><dl><div><dt>Goal</dt><dd>{props.goal}</dd></div><div><dt>Approach</dt><dd>{props.approach}</dd></div><div><dt>Outcome</dt><dd>{props.outcome}</dd></div></dl></div></div></div></div> : null;
 
-  return <><button ref={triggerRef} type="button" className="project-cta" onClick={() => setOpen(true)} aria-haspopup="dialog" aria-expanded={open}>{props.triggerLabel} <span aria-hidden="true">↗</span></button>{mounted && modal ? createPortal(modal, document.body) : null}</>;
+  return <><button ref={triggerRef} type="button" className="project-cta" onClick={() => setOpen(true)} aria-haspopup="dialog" aria-expanded={open}>{props.triggerLabel} <span aria-hidden="true">↗</span></button>{modal ? createPortal(modal, document.body) : null}</>;
 }
