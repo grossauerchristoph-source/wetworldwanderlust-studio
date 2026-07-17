@@ -102,7 +102,7 @@ export default function Home() {
 
       <section className="pre-cta section">
         <div className="section-label"><span>07</span><span>Before we begin</span></div>
-        <div className="pre-cta-grid"><PhotoPlaceholder className="closing-photo image-reveal" label="Tanja & Christoph, off duty" note="Warm candid moment · no camera awareness · landscape" /><div className="pre-cta-copy reveal-text"><p className="kicker">A note from both of us</p><h2>We will care about the details because we care about what they mean for you.</h2><p>We take on a small number of projects so we can stay close to each one. If we work together, you get our attention, our honest opinion and a result we are both willing to put our names on.</p><p className="signature">Tanja & Christoph</p></div></div>
+        <div className="pre-cta-grid"><FounderPortrait className="closing-photo image-reveal" src="/lifestyle/section-07.jpg" alt="Tanja and Christoph sharing a relaxed moment together" /><div className="pre-cta-copy reveal-text"><p className="kicker">A note from both of us</p><h2>We will care about the details because we care about what they mean for you.</h2><p>We take on a small number of projects so we can stay close to each one. If we work together, you get our attention, our honest opinion and a result we are both willing to put our names on.</p><p className="signature">Tanja & Christoph</p></div></div>
       </section>
 
       <section className="cta-section">
