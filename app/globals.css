@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import "../node_modules/tailwindcss/index.css";
 
 :root { --ink:#191917; --paper:#f3f0e9; --cream:#e9e3d8; --sand:#cfc5b5; --stone:#8f8b82; --sage:#a7aaa0; --lime:#d9ee43; --line:rgba(25,25,23,.18); --serif:Georgia,"Times New Roman",serif; }
 * { box-sizing:border-box; }
