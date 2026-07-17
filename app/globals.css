@@ -91,7 +91,8 @@ h2 em { font-weight:400; color:#716f66; }
 .together-intro>p { font:400 19px/1.55 var(--serif); margin:0 0 10px; }
 .people-grid { width:88%; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:6vw; position:relative; }
 .person-card { background:#ddd5c8; }
-.person-photo { min-height:560px; }
+.person-photo { min-height:560px; aspect-ratio:4/5; }
+.person-photo>img { display:block; width:100%; height:100%; object-fit:cover; }
 .christoph .photo-tone { background:radial-gradient(circle at 48% 28%,#d4cabc,transparent 23%),linear-gradient(140deg,#777771,#a89e91 58%,#5e625f); }
 .tanja .photo-tone { background:radial-gradient(circle at 56% 25%,#e0d4c3,transparent 24%),linear-gradient(130deg,#8b8074,#b7aa9b 58%,#686b65); }
 .person-copy { padding:50px; display:grid; grid-template-columns:1fr 1fr; gap:45px; }

@@ -11,6 +11,12 @@ const PhotoPlaceholder = ({ label, note, className = "" }: PhotoProps) => (
   </figure>
 );
 
+const FounderPortrait = ({ src, alt, className = "" }: { src: string; alt: string; className?: string }) => (
+  <figure className={`photo ${className}`}>
+    <img src={src} alt={alt} loading="lazy" />
+  </figure>
+);
+
 export default function Home() {
   return (
     <main>
@@ -53,13 +59,13 @@ export default function Home() {
         <div className="section-label"><span>02</span><span>Why two people?</span></div>
         <div className="together-intro reveal-text"><h2>Because good work<br />needs more than<br />one way of seeing.</h2><p>Our differences do not wait for a handoff. They challenge, sharpen and complete each other — at the same table, from the first question to the final detail.</p></div>
         <div className="people-grid">
-          <article className="person-card">
-            <PhotoPlaceholder className="person-photo christoph image-reveal" label="Christoph" note="Environmental portrait · thoughtful, natural light" />
-            <div className="person-copy"><div><p className="kicker">Christoph sees</p><h3>The system<br />behind the idea.</h3></div><ul><li>Strategy</li><li>Systems</li><li>Structure</li><li>Logic</li></ul><p>He asks the questions that create focus: What matters? What connects? What will still work when the business grows?</p></div>
-          </article>
           <article className="person-card tanja-card">
-            <PhotoPlaceholder className="person-photo tanja image-reveal" label="Tanja" note="Environmental portrait · expressive, unposed" />
+            <FounderPortrait className="person-photo tanja image-reveal" src="/founders/tanja-portrait.jpg" alt="Portrait of Tanja" />
             <div className="person-copy"><div><p className="kicker">Tanja sees</p><h3>The person<br />inside the system.</h3></div><ul><li>Creativity</li><li>Emotion</li><li>Aesthetics</li><li>Humanity</li></ul><p>She asks the questions that create connection: How does this feel? What will people remember? Where does the brand become human?</p></div>
+          </article>
+          <article className="person-card">
+            <FounderPortrait className="person-photo christoph image-reveal" src="/founders/christoph-portrait.jpg" alt="Portrait of Christoph" />
+            <div className="person-copy"><div><p className="kicker">Christoph sees</p><h3>The system<br />behind the idea.</h3></div><ul><li>Strategy</li><li>Systems</li><li>Structure</li><li>Logic</li></ul><p>He asks the questions that create focus: What matters? What connects? What will still work when the business grows?</p></div>
           </article>
           <p className="people-bridge"><span>Different instincts.</span><span>One shared table.</span></p>
         </div>
