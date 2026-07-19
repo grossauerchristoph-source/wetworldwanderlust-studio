@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArrowIcon } from "../ArrowIcon";
 
 export const metadata: Metadata = {
   title: "Imprint | WetWorldWanderlust Studios",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 export default function ImprintPage() {
   return (
     <main className="legal-page">
-      <Link className="legal-back" href="/">← WetWorldWanderlust</Link>
+      <Link className="legal-back" href="/"><ArrowIcon direction="west" /> WetWorldWanderlust</Link>
       <header><p className="eyebrow"><i /> Legal placeholder</p><h1>Imprint</h1></header>
       <p className="legal-warning">Development notice: This page is not ready for production. Verified business information must be supplied before launch.</p>
       <section>

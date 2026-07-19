@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import { ArrowIcon } from "./ArrowIcon";
 
 type WebsitePreviewProps = { src: string; alt: string; label: string };
 
@@ -161,7 +162,7 @@ function ModalWebsitePreview({ src, alt }: { src: string; alt: string }) {
     pausedRef.current = false;
   };
 
-  return <div className="modal-browser"><div className="modal-browser-bar"><i /><i /><i /><button type="button" onClick={restart}>Return to top ↑</button></div><div ref={frameRef} className="modal-website-scroll" tabIndex={0} onMouseEnter={() => { pausedRef.current = true; }} onMouseLeave={() => { pausedRef.current = false; }} onWheel={() => { pausedRef.current = true; }} onPointerDown={() => { pausedRef.current = true; }} aria-label="Scrollable full-page website preview"><img src={src} alt={alt} loading="lazy" decoding="async" /></div></div>;
+  return <div className="modal-browser"><div className="modal-browser-bar"><i /><i /><i /><button type="button" onClick={restart}>Return to top <ArrowIcon direction="north" /></button></div><div ref={frameRef} className="modal-website-scroll" tabIndex={0} onMouseEnter={() => { pausedRef.current = true; }} onMouseLeave={() => { pausedRef.current = false; }} onWheel={() => { pausedRef.current = true; }} onPointerDown={() => { pausedRef.current = true; }} aria-label="Scrollable full-page website preview"><img src={src} alt={alt} loading="lazy" decoding="async" /></div></div>;
 }
 
 function ModalVideo({ src, poster }: { src: string; poster: string }) {
@@ -226,5 +227,5 @@ export function ProjectModalTrigger(props: ProjectModalProps) {
 
   const modal = open ? <div className="project-modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setOpen(false); }}><div ref={modalRef} className={`project-modal project-modal-${props.kind}`} role="dialog" aria-modal="true" aria-labelledby={titleId}><button type="button" className="project-modal-close" onClick={() => setOpen(false)} aria-label={`Close ${props.title} project`}>Close ×</button><div className="project-modal-grid"><div className="project-modal-media">{props.kind === "website" && props.imageSrc && props.imageAlt ? <ModalWebsitePreview src={props.imageSrc} alt={props.imageAlt} /> : props.videoSrc && props.poster ? <ModalVideo src={props.videoSrc} poster={props.poster} /> : null}</div><div className="project-modal-copy"><p className="kicker">Selected Work</p><h2 id={titleId}>{props.title}</h2><dl><div><dt>Goal</dt><dd>{props.goal}</dd></div><div><dt>Approach</dt><dd>{props.approach}</dd></div><div><dt>Outcome</dt><dd>{props.outcome}</dd></div></dl></div></div></div></div> : null;
 
-  return <><button ref={triggerRef} type="button" className="project-cta" onClick={() => setOpen(true)} aria-haspopup="dialog" aria-expanded={open}>{props.triggerLabel} <span aria-hidden="true">↗</span></button>{modal ? createPortal(modal, document.body) : null}</>;
+  return <><button ref={triggerRef} type="button" className="project-cta" onClick={() => setOpen(true)} aria-haspopup="dialog" aria-expanded={open}>{props.triggerLabel} <ArrowIcon /></button>{modal ? createPortal(modal, document.body) : null}</>;
 }

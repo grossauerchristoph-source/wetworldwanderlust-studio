@@ -1,7 +1,7 @@
 import { ProjectModalTrigger, UgcVideo, WebsitePreview } from "./ProjectMedia";
 import { HeroVideo } from "./HeroVideo";
-
-const Arrow = () => <span aria-hidden="true">↗</span>;
+import { ArrowIcon } from "./ArrowIcon";
+import { MobileNavigation } from "./MobileNavigation";
 
 const FounderPortrait = ({ src, alt, className = "" }: { src: string; alt: string; className?: string }) => (
   <figure className={`photo ${className}`}>
@@ -16,8 +16,8 @@ export default function Home() {
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="WetWorldWanderlust – Startseite"><span>WetWorld</span><span>Wanderlust</span></a>
         <nav className="desktop-nav" aria-label="Hauptnavigation"><a href="#story">Our story</a><a href="#together">Why two</a><a href="#work">Work</a></nav>
-        <a className="header-cta" href="mailto:wetworldwanderlust@gmail.com?subject=Project%20inquiry">Start a conversation <Arrow /></a>
-        <details className="mobile-menu"><summary aria-label="Menü öffnen"><span /><span /></summary><nav aria-label="Mobile Navigation"><a href="#story">Our story</a><a href="#together">Why two</a><a href="#work">Work</a><a href="mailto:wetworldwanderlust@gmail.com?subject=Tell%20us%20about%20your%20project">Tell us about your project <Arrow /></a></nav></details>
+        <a className="header-cta" href="mailto:wetworldwanderlust@gmail.com?subject=Project%20inquiry">Start a conversation <ArrowIcon /></a>
+        <MobileNavigation />
       </header>
 
       <section className="hero" id="top">
@@ -27,7 +27,7 @@ export default function Home() {
           <p className="hero-brandline">Human judgment. Modern execution.</p>
           <p className="hero-positioning">We help businesses earn trust through thoughtful digital experiences.</p>
           <p className="hero-intro">We are a married couple from Austria, now living in Southeast Asia. Human strategy and modern execution come together in every decision we make.</p>
-          <div className="hero-actions"><a className="text-link" href="#story">Get to know us <Arrow /></a><a className="primary-link" href="mailto:wetworldwanderlust@gmail.com?subject=Let%27s%20build%20something%20together">Let&apos;s build something together <Arrow /></a></div>
+          <div className="hero-actions"><a className="text-link" href="#story">Get to know us <ArrowIcon /></a><a className="primary-link" href="mailto:wetworldwanderlust@gmail.com?subject=Let%27s%20build%20something%20together">Let&apos;s build something together <ArrowIcon /></a></div>
         </div>
         <HeroVideo />
         <div className="hero-aside"><p>Human strategy</p><p>Modern execution</p><span>One conversation, two perspectives, every decision made together.</span></div>
@@ -83,7 +83,7 @@ export default function Home() {
       <section className="offer section">
         <div className="section-label"><span>05</span><span>Two core disciplines</span></div>
         <div className="offer-intro reveal-text"><h2>Trust is built<br />in the experience<br /><em>and the story.</em></h2><p>Digital products and UGC are equal parts of our studio. One shapes the place people arrive. The other shapes the moments that bring them there.</p></div>
-        <div className="offer-grid"><article><span>01 / Digital experiences</span><p className="kicker">Strategy · Design · Development</p><h3>Websites, landing pages and funnels</h3><p>We turn complex value into a clear, credible experience — designed around the questions people ask before they trust a business.</p><a href="mailto:wetworldwanderlust@gmail.com?subject=Digital%20product%20project">Build the experience <Arrow /></a></article><article><span>02 / Human content</span><p className="kicker">Concept · Production · Campaign</p><h3>UGC, product videos and social content</h3><p>We create natural, platform-aware stories that help brands sound like people and products feel part of real life.</p><a href="mailto:wetworldwanderlust@gmail.com?subject=UGC%20project">Tell the human story <Arrow /></a></article></div>
+        <div className="offer-grid"><article><span>01 / Digital experiences</span><p className="kicker">Strategy · Design · Development</p><h3>Websites, landing pages and funnels</h3><p>We turn complex value into a clear, credible experience — designed around the questions people ask before they trust a business.</p><a href="mailto:wetworldwanderlust@gmail.com?subject=Digital%20product%20project">Build the experience <ArrowIcon /></a></article><article><span>02 / Human content</span><p className="kicker">Concept · Production · Campaign</p><h3>UGC, product videos and social content</h3><p>We create natural, platform-aware stories that help brands sound like people and products feel part of real life.</p><a href="mailto:wetworldwanderlust@gmail.com?subject=UGC%20project">Tell the human story <ArrowIcon /></a></article></div>
       </section>
 
       <section className="process section dark">
@@ -100,10 +100,10 @@ export default function Home() {
       <section className="cta-section">
         <div className="cta-kicker"><p className="eyebrow"><i /> Maybe we are the right two people.</p><span>One thoughtful project at a time.</span></div>
         <h2>Tell us what you&apos;re<br />trying to <em>change.</em></h2>
-        <div className="cta-bottom"><p className="cta-copy">No polished brief needed. Start with the challenge, the ambition or the idea you cannot stop thinking about.</p><div className="cta-action"><a className="primary-cta" href="mailto:wetworldwanderlust@gmail.com?subject=Project%20inquiry"><span>Start a conversation</span><Arrow /></a><p className="cta-note">The best work begins when both sides can speak honestly.</p></div></div>
+        <div className="cta-bottom"><p className="cta-copy">No polished brief needed. Start with the challenge, the ambition or the idea you cannot stop thinking about.</p><div className="cta-action"><a className="primary-cta" href="mailto:wetworldwanderlust@gmail.com?subject=Project%20inquiry"><span>Start a conversation</span><ArrowIcon /></a><p className="cta-note">The best work begins when both sides can speak honestly.</p></div></div>
       </section>
 
-      <footer><div className="footer-top"><a className="wordmark" href="#top"><span>WetWorld</span><span>Wanderlust</span></a><p>Tanja & Christoph<br />Austria · Southeast Asia</p><p>Human strategy.<br />Modern execution.</p></div><div className="footer-bottom"><span>© 2026 WetWorldWanderlust</span><div><a href="mailto:wetworldwanderlust@gmail.com">Email</a><a href="/imprint">Imprint</a><a href="/privacy">Privacy</a><a href="#top">Back to top ↑</a></div></div></footer>
+      <footer><div className="footer-top"><a className="wordmark" href="#top"><span>WetWorld</span><span>Wanderlust</span></a><p>Tanja & Christoph<br />Austria · Southeast Asia</p><p>Human strategy.<br />Modern execution.</p></div><div className="footer-bottom"><span>© 2026 WetWorldWanderlust</span><div><a href="mailto:wetworldwanderlust@gmail.com">Email</a><a href="/imprint">Imprint</a><a href="/privacy">Privacy</a><a className="footer-top-link" href="#top">Back to top <ArrowIcon /></a></div></div></footer>
     </main>
   );
 }
