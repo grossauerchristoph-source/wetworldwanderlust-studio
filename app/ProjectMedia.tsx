@@ -125,6 +125,9 @@ type ProjectModalProps = {
   goal: string;
   approach: string;
   outcome: string;
+  goalLabel?: string;
+  approachLabel?: string;
+  outcomeLabel?: string;
   kind: "website" | "video";
   imageSrc?: string;
   imageAlt?: string;
@@ -225,7 +228,7 @@ export function ProjectModalTrigger(props: ProjectModalProps) {
     };
   }, [open]);
 
-  const modal = open ? <div className="project-modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setOpen(false); }}><div ref={modalRef} className={`project-modal project-modal-${props.kind}`} role="dialog" aria-modal="true" aria-labelledby={titleId}><button type="button" className="project-modal-close" onClick={() => setOpen(false)} aria-label={`Close ${props.title} project`}>Close ×</button><div className="project-modal-grid"><div className="project-modal-media">{props.kind === "website" && props.imageSrc && props.imageAlt ? <ModalWebsitePreview src={props.imageSrc} alt={props.imageAlt} /> : props.videoSrc && props.poster ? <ModalVideo src={props.videoSrc} poster={props.poster} /> : null}</div><div className="project-modal-copy"><p className="kicker">Selected Work</p><h2 id={titleId}>{props.title}</h2><dl><div><dt>Goal</dt><dd>{props.goal}</dd></div><div><dt>Approach</dt><dd>{props.approach}</dd></div><div><dt>Outcome</dt><dd>{props.outcome}</dd></div></dl></div></div></div></div> : null;
+  const modal = open ? <div className="project-modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setOpen(false); }}><div ref={modalRef} className={`project-modal project-modal-${props.kind}`} role="dialog" aria-modal="true" aria-labelledby={titleId}><button type="button" className="project-modal-close" onClick={() => setOpen(false)} aria-label={`Close ${props.title} project`}>Close ×</button><div className="project-modal-grid"><div className="project-modal-media">{props.kind === "website" && props.imageSrc && props.imageAlt ? <ModalWebsitePreview src={props.imageSrc} alt={props.imageAlt} /> : props.videoSrc && props.poster ? <ModalVideo src={props.videoSrc} poster={props.poster} /> : null}</div><div className="project-modal-copy"><p className="kicker">Selected Work</p><h2 id={titleId}>{props.title}</h2><dl><div><dt>{props.goalLabel ?? "Goal"}</dt><dd>{props.goal}</dd></div><div><dt>{props.approachLabel ?? "Approach"}</dt><dd>{props.approach}</dd></div><div><dt>{props.outcomeLabel ?? "Outcome"}</dt><dd>{props.outcome}</dd></div></dl></div></div></div></div> : null;
 
   return <><button ref={triggerRef} type="button" className="project-cta" onClick={() => setOpen(true)} aria-haspopup="dialog" aria-expanded={open}>{props.triggerLabel} <ArrowIcon /></button>{modal ? createPortal(modal, document.body) : null}</>;
 }
