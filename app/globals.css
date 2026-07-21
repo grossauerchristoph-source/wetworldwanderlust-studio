@@ -166,7 +166,7 @@ h2 em { font-weight:400; color:#716f66; }
 .project-modal-copy dl { margin:0; }
 .project-modal-copy dl>div { padding:17px 0; border-top:1px solid var(--line); }
 .project-modal-copy dt { margin-bottom:8px; font-size:9px; text-transform:uppercase; letter-spacing:.15em; }
-.project-modal-copy dd { margin:0; font:400 16px/1.55 var(--serif); color:#5f5c55; }
+.project-modal-copy dd { margin:0; white-space:pre-line; font:400 16px/1.55 var(--serif); color:#5f5c55; }
 .modal-browser { border:1px solid rgba(25,25,23,.28); background:#d8d4cb; }
 .modal-browser-bar { height:38px; padding:0 13px; display:flex; gap:7px; align-items:center; border-bottom:1px solid rgba(25,25,23,.18); }
 .modal-browser-bar i { width:6px; height:6px; border-radius:50%; background:#77736b; }
